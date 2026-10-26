@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Potato Vacances Clicker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🥔 Potato Vacances Clicker</h1>
+  <div class="stats">
+    <div>Patates <b id="score">0</b></div>
+    <div>Par seconde <b id="pps">0</b></div>
+    <div>Objectif <b id="goal">0 %</b></div>
+    <button id="restart">Recommencer</button>
+  </div>
+</header>
+
+<main>
+  <section id="game">
+    <div id="combo">Combo x1</div>
+    <button id="potato" aria-label="Récolter une patate">🥔</button>
+    <div id="sun">
+      <span>☀️ Bronzage</span>
+      <div class="bar"><div id="zone"></div><div id="heat"></div></div>
+      <small id="sunMsg">Clique vite, mais pas trop ! Reste dans la zone verte (x2).</small>
+    </div>
+    <button id="golden" hidden aria-label="Patate dorée">🌟🥔</button>
+  </section>
+
+  <aside>
+    <h2>🏖️ Boutique de vacances</h2>
+    <h3>Bâtiments</h3>
+    <div id="shop"></div>
+    <h3>Améliorations</h3>
+    <div id="ups"></div>
+  </aside>
+</main>
+
+<section id="mini">
+  <div class="mg" id="mg-garden"><h3>🌱 Jardin <small>(Ferme)</small></h3><div class="lock"></div>
+    <div class="body"><small>Plante (payant), attends 15 s, récolte x3 avant 30 s sinon ça pourrit.</small><div id="plots"></div></div></div>
+  <div class="mg" id="mg-stock"><h3>📈 Bourse <small>(Moulin)</small></h3><div class="lock"></div>
+    <div class="body"><small>Achète bas, vends haut.</small>
+      <p>Cours : <b id="stPrice"></b> <span id="stTrend"></span></p><p>En stock : <b id="stHeld">0</b></p>
+      <button id="stBuy">Acheter</button> <button id="stSell">Vendre</button> <button id="stAll">Tout vendre</button></div></div>
+  <div class="mg" id="mg-magic"><h3>🔮 Sortilèges <small>(Plage à patates)</small></h3><div class="lock"></div>
+    <div class="body"><div class="bar"><div id="mana"></div></div><small id="manaTxt"></small>
+      <button id="sp0">🌧️ Pluie de patates (25)</button>
+      <button id="sp1">🌟 Frénésie (35)</button>
+      <button id="sp2">☂️ Parasol magique (15)</button></div></div>
+</section>
+
+<div id="overlay">
+  <div class="card">
+    <h2 id="ovTitle">Potato Vacances Clicker</h2>
+    <p id="ovText">Récolte 1 000 milliards de patates pour gagner tes vacances ! Clique sur la patate, enchaîne les combos, achète des améliorations et attrape la patate dorée 🌟.</p>
+    <button id="start">Jouer</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
